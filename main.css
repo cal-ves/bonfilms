@@ -1,0 +1,192 @@
+* {
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.hero-padding {
+  padding: 60px 0;
+}
+.title-padding {
+  padding: 30px 0 0 0;
+}
+
+.home__video {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.home__video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.menu {
+  position: absolute;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  padding-top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.menu__logo {
+  width: 360px;
+}
+.footer__logo {
+  width: 120px;
+}
+
+.mb-4 {
+  margin: 16px auto;
+}
+
+.btn {
+  width: 100%;
+}
+
+.videos {
+  display: flex;
+  gap: 8px;
+  height: 540px;
+}
+
+.section-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.iframe__div__even {
+  transform: translateY(5%);
+}
+
+.iframe {
+  border-radius: 8px;
+}
+
+.card__container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+}
+
+.card-title {
+  justify-content: center;
+  margin-top: 8px;
+  padding: 8px 0 4px;
+  font-size: 2rem;
+}
+
+.card-text {
+  padding: 12px 0;
+  max-height: 108px;
+}
+
+.disclaimer-convidados {
+  font-size: 0.75rem;
+  transform: translateY(-75%);
+}
+
+.disclaimer-tempo {
+  color: red;
+  font-size: 0.75rem;
+}
+
+.price {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-top: 24px;
+  max-height: 90px;
+  font-weight: bold;
+}
+
+.card-img {
+  height: 536px;
+  width: 100%;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin: 8px 0;
+  gap: 8px;
+}
+
+input {
+  font-size: 1.5rem;
+}
+
+h1,
+h2 {
+  margin: 12px 0;
+}
+
+.card-title {
+  margin-bottom: 4px;
+}
+
+ul,
+.card-text {
+  padding: 0;
+}
+
+.card-body {
+  height: 210px;
+}
+
+.empty-body {
+  height: 100px;
+}
+.btn {
+  margin-top: 8px;
+}
+
+.main-btn {
+  font-size: 1.2rem;
+  width: 520px;
+}
+
+.payment-forms {
+  display: flex;
+  gap: 36px;
+}
+
+.payment-forms-card {
+  margin-top: 24px;
+  height: 160px;
+  width: 240px;
+  border-radius: 8px;
+  background-color: #18181b;
+  color: #fff;
+  padding: 12px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer {
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 120px;
+}
