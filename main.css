@@ -246,7 +246,7 @@ input {
   overflow: hidden;
 }
 
-.videos video {
+.videos iframe {
   height: 400px;
   width: 100%;
   object-fit: cover;
