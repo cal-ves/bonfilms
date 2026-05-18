@@ -1,402 +1,76 @@
-/* ====== ESTILOS GERAIS (todos os dispositivos) ====== */
+/* ====== OPTIMIZED STYLES ====== */
 
-* {
-  padding: 0;
-  box-sizing: border-box;
+body {
   font-family: "Poppins", sans-serif;
 }
 
-/* Containers e layout */
-.container {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 1rem;
+/* Exclui a fonte Poppins do footer */
+footer, footer * {
+    font-family: ui-sans-serif, system-ui, -apple-system, sans-serif !important;
 }
 
-.section-column {
-  display: flex;
-  flex-direction: column;
+/* Custom styles not covered by Tailwind v4 utilities */
+
+/* Performance: Skip rendering for off-screen sections */
+section, .hero {
+    content-visibility: auto;
 }
 
-/* Espaçamento */
-.hero-padding {
-  padding: 60px 0;
+/* Customize DaisyUI Tab colors to match the cinematic theme */
+:root {
+    --tab-border: 1px;
+    --tab-radius: 0.5rem;
 }
 
-.title-padding {
-  padding: 30px 0 0 0;
-}
-
-.mb-4 {
-  margin: 16px auto;
-}
-
-/* Vídeo da página inicial */
-.home__video {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-}
-
-.home__video video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  object-fit: cover;
-}
-
-/* Menu de navegação */
-.menu {
-  position: absolute;
-  top: 0;
-  z-index: 1000;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: transparent;
-  padding-top: 24px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-/* Logotipos */
-.menu__logo {
-  padding-top: 24px;
-  width: 360px;
-}
-
-.footer__logo {
-  width: 120px;
-}
-
-/* Cards */
-.card__container {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: center;
-  gap: 1rem;
-  max-width: 100%;
-  overflow: hidden;
-}
-.card__container2 {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-  max-width: 100%;
-  overflow: hidden;
-}
-
-.card {
-  margin-bottom: 1rem;
-}
-
-.card-title {
-  justify-content: center;
-  margin-top: 8px;
-  padding: 8px 0 4px;
-  font-size: 2rem;
-  margin-bottom: 4px;
-}
-
-.card-text {
-  padding: 12px 0;
-  max-height: 108px;
-}
-
-.card-body {
-  height: 210px;
-  color: #18181b;
-}
-
-.empty-body {
-  height: 100px;
-}
-
-/* Botões e abas */
-.tabs {
-  display: flex;
-  justify-content: center;
-  gap: 8px;
-  width: 100%;
-  margin: 0 auto 40px;
-}
-
-.btn-xs {
-  border-radius: 50%;
-  width: 16px;
-  height: 16px;
-}
-
-.btn-ct {
-  margin-top: 8px;
-  background-color: #fff;
-  color: #18181b;
-  border: none;
-  border-radius: 4px;
-  padding: 12px 24px;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-  transition: all 0.3s ease;
-}
-
-.btn-ct:hover {
-  background-color: #ffff;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
-}
-
-.main-btn {
-  font-size: 1.2rem;
-  width: 520px;
-}
-
-/* Texto e tipografia */
-h1,
-h2 {
-  margin: 12px auto;
-  font-size: 3rem;
-}
-
-ul,
-.card-text {
-  padding: 0;
-}
-
-input {
-  font-size: 1.5rem;
-  color: #fff;
-}
-
-.disclaimer-convidados {
-  font-size: 0.75rem;
-  transform: translateY(-75%);
-}
-
-.disclaimer-tempo {
-  color: red;
-  font-size: 0.75rem;
-}
-
-.price {
-  font-size: 2.5rem;
-  text-align: center;
-  margin-top: 24px;
-  max-height: 90px;
-  font-weight: bold;
-}
-
-/* Pagamento */
-.payment-forms {
-  display: flex;
-  gap: 36px;
-}
-
-.payment-forms-card {
-  margin-top: 24px;
-  height: 160px;
-  width: 240px;
-  border-radius: 8px;
-  background-color: #18181b;
-  color: #fff;
-  padding: 12px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* Footer */
-.footer {
-  padding: 20px 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  margin: 0 auto;
-  gap: 120px;
-}
-
-/* Cores de fundo */
-.bg-base-black {
-  background-color: oklch(14% 0.005 285.823);
-  color: #fff;
+/* Force absolute Black and White */
+:root {
+    --color-base-100: #000000;
+    --color-base-content: #ffffff;
 }
 
 .tab-content {
-  background-color: oklch(14% 0.005 285.823);
-  border: none;
+    border: none !important;
 }
 
-/* Iframe e vídeos */
-.iframe {
-  border-radius: 8px;
+/* Smooth transition for hover effects */
+.card {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.iframe__div,
-.iframe__div__even {
-  height: 600px;
-  width: 100%;
-  overflow: hidden;
+/* Video Background optimization */
+.hero-overlay {
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
-.videos iframe {
-  height: 400px;
-  width: 100%;
-  object-fit: cover;
-  border-radius: 12px;
+/* Improve readability on white sections */
+.text-black {
+    color: #000000 !important;
 }
 
-.videos {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 0.5rem;
-  max-width: 100%;
+/* Melhoria na suavidade do Carrossel */
+#gallery-carousel {
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* IE e Edge */
+}
+
+#gallery-carousel::-webkit-scrollbar {
+    display: none; /* Chrome, Safari e Opera */
 }
 
 .carousel-item {
-  display: flex;
-  justify-content: center;
-  gap: 24px;
+    scroll-snap-align: start;
 }
 
-.card-img {
-  height: 540px;
-  width: 100%;
-  align-self: center;
-  border-radius: 8px;
+/* Restore list appearance for cards */
+.card-body ul {
+    list-style-type: none;
+    padding-left: 0.5rem;
 }
 
-/* ====== TABLET (768px - 1023px) ====== */
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  .card {
-    width: calc(33.333% - 1rem);
-    max-width: 300px;
-  }
-
-  .videos {
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 0.1rem;
-  }
-}
-
-/* ====== DESKTOP (1024px e acima) ====== */
-@media screen and (min-width: 1024px) {
-  .container {
-    max-width: 1024px;
-  }
-
-  .iframe__div__even {
-    transform: translateY(5%);
-  }
-
-  .videos {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-/* ====== MOBILE (até 767px) ====== */
-@media screen and (max-width: 767px) {
-  body {
-    max-width: 100%;
-    overflow-x: hidden;
-  }
-
-  .menu {
-    padding: 1rem;
-    text-align: center;
-  }
-
-  .menu__logo {
-    max-width: 200px;
-    width: 100%;
-    height: auto;
-  }
-
-  .hero-content {
-    text-align: center;
-    padding: 1rem;
-    max-width: 100%;
-  }
-
-  h1,
-  h2 {
-    font-size: 2rem;
-  }
-
-  input {
-    font-size: 1.2rem;
-  }
-
-  .videos {
-    grid-template-columns: 1fr;
-    gap: 0.5rem;
-  }
-
-  .card__container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .card {
-    scrollbar-width: none;
-    width: 100%;
-    max-width: 350px;
-  }
-
-  .btn-xs {
-    height: 12px;
-    width: 12px;
-  }
-
-  .mobile1 {
-    width: 100%;
-    height: 360px;
-  }
-
-  .mobile2 {
-    height: 250px;
-    width: 100%;
-  }
-
-  .carousel-item {
-    gap: 6px;
-  }
-
-  .payment-forms {
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-  }
-
-  .payment-forms-card {
-    width: 100%;
-    max-width: 350px;
-    margin-bottom: 1rem;
-  }
-
-  .main-btn {
-    width: 100%;
-    max-width: 350px;
-  }
-
-  .footer {
-    flex-direction: column;
-    gap: 1rem;
-    text-align: center;
-  }
-
-  .tabs {
-    flex-direction: column;
-  }
-
-  .iframe__div__even {
-    transform: translateY(0%);
-  }
+.card-body li {
+    position: relative;
+    padding-bottom: 0.25rem;
 }

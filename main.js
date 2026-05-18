@@ -1,34 +1,14 @@
-// Adicione este script no final do seu documento HTML
 document.addEventListener("DOMContentLoaded", function () {
-  // Seleciona todos os botões indicadores do carousel
-  const carouselButtons = document.querySelectorAll(
-    ".flex.w-full.justify-center.gap-2.py-2 a"
-  );
+  // Smooth scroll for carousel indicators without page jump
+  const carouselButtons = document.querySelectorAll('a[href^="#item"]');
 
-  // Adiciona um event listener para cada botão
   carouselButtons.forEach((button) => {
     button.addEventListener("click", function (e) {
-      // Previne o comportamento padrão (rolagem da página)
       e.preventDefault();
-
-      // Obtém o id do slide alvo a partir do atributo href
       const targetId = this.getAttribute("href");
-
-      // Encontra o elemento alvo
       const targetElement = document.querySelector(targetId);
 
-      // Se o elemento existir, mostra ele no carousel sem rolar a página
       if (targetElement) {
-        // Você pode usar qualquer lógica adicional específica do carousel aqui, se necessário
-
-        // Exemplo: se o carousel tiver uma classe ou atributo para o slide ativo
-        document.querySelectorAll(".carousel-item").forEach((item) => {
-          item.classList.remove("active"); // Remove classes ativas, se existirem
-        });
-
-        targetElement.classList.add("active"); // Adiciona classe ativa ao alvo
-
-        // Alternativa: usando scrollIntoView com comportamento suave, mas configurado para não rolar a página
         targetElement.scrollIntoView({
           behavior: "smooth",
           block: "nearest",
@@ -37,4 +17,40 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
+
+  // Automatic Gallery Transition
+  const gallery = document.getElementById('gallery-carousel');
+  if (gallery) {
+    let isAutoScrolling = true;
+
+    // Pausa a rolagem ao passar o mouse para melhor UX
+    gallery.addEventListener('mouseenter', () => { isAutoScrolling = false; });
+    gallery.addEventListener('mouseleave', () => { isAutoScrolling = true; });
+
+    // Otimização: Pausa o intervalo se a galeria não estiver visível na tela
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        isAutoScrolling = entry.isIntersecting;
+      });
+    }, { threshold: 0.1 });
+    observer.observe(gallery);
+
+    const autoScroll = () => {
+      if (!isAutoScrolling) return;
+      
+      const items = gallery.querySelectorAll('.carousel-item');
+      if (items.length === 0) return;
+
+      const itemWidth = items[0].offsetWidth;
+      const isAtEnd = gallery.scrollLeft + gallery.offsetWidth >= gallery.scrollWidth - 10;
+
+      if (isAtEnd) {
+        gallery.scrollTo({ left: 0, behavior: 'smooth' });
+      } else {
+        gallery.scrollTo({ left: gallery.scrollLeft + itemWidth, behavior: 'smooth' });
+      }
+    };
+
+    setInterval(autoScroll, 2000);
+  }
 });

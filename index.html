@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -22,33 +22,26 @@
     <link rel="stylesheet" href="main.css" />
     <link rel="shortcut icon" href="src/fav.png" type="image/x-icon" />
   </head>
-  <body>
-    <header class="menu container">
-      <img
-        src="src/LOGO BONFILMS - 03.png"
-        class="menu__logo"
-        alt="Logo BonFilms"
-      />
+  <body class="bg-black text-white">
+    <header class="absolute top-0 z-50 w-full bg-transparent py-4">
+      <div class="container mx-auto flex justify-center px-4">
+        <img src="src/LOGO BONFILMS - 03.png" class="w-48 md:w-80" alt="Logo BonFilms" />
+      </div>
     </header>
-    <div class="home__video">
-      <video autoplay muted playsinline loop src="src/home.mp4"></video>
-    </div>
+
+    <section class="relative h-screen w-full overflow-hidden">
+      <video autoplay muted playsinline loop src="src/home.mp4" class="absolute inset-0 h-full w-full object-cover"></video>
+    </section>
+
     <div class="hero min-h-screen" style="background-image: url(src/about.jpg)">
-      <div class="hero-overlay"></div>
-      <div class="hero-content text-neutral-content text-justify">
-        <div class="max-w-lg">
-          <h1 class="my-5 text-5xl font-bold">Prazer, Somos a</h1>
-          <img src="src/LOGO BONFILMS - 03.png" alt="" />
-          <p class="my-5">
+      <div class="hero-overlay bg-black/60"></div>
+      <div class="hero-content text-neutral-content text-center">
+        <div class="max-w-2xl px-4 flex flex-col items-center">
+          <h1 class="my-5 text-4xl md:text-6xl font-bold animate__animated animate__fadeIn">Prazer, Somos a</h1>
+          <p class="mb-8 text-lg leading-relaxed opacity-90">
             Uma produtora de audiovisual especializada em transformar momentos
             únicos em memórias inesquecíveis. Atuamos na criação de fotos e
-            vídeos para casamentos, aniversários, festas, ensaios, fashion films
-            e vídeos corporativos, sempre com um olhar atento aos detalhes e à
-            essência de cada cliente. Com expertise em narrativas visuais
-            impactantes, nossa missão é capturar emoções autênticas e criar
-            conteúdos que encantem e conectem.
-          </p>
-          <p class="my-5">
+            vídeos para casamentos, aniversários, festas e vídeos corporativos.
             Valorizamos a criatividade, a inovação e a qualidade em cada
             projeto, seja na produção de filmes artísticos, ensaios fotográficos
             marcantes ou vídeos corporativos estratégicos para fortalecer a
@@ -56,570 +49,157 @@
           </p>
           <a
             href="https://wa.me/+5521972874002"
-            class="btn-ct btn-neutral main-btn flex justify-center"
+            class="btn bg-white text-black hover:bg-white/90 border-none btn-lg w-full md:w-auto px-12 transition-all hover:scale-105 mx-auto"
           >
             Entre em contato
           </a>
         </div>
       </div>
     </div>
-    <div class="hero hero-padding bg-base-200 min-h-screen">
-      <div class="hero-content text-center section-column">
-        <div class="max-w-lg">
-          <h1 class="text-5xl font-bold">A Qualidade que Seu Evento Merece</h1>
-          <p class="py-6">
+
+    <section class="py-20 bg-white text-black">
+      <div class="container mx-auto px-4 text-center">
+          <h2 class="text-3xl md:text-5xl font-bold mb-4">A Qualidade que Seu Evento Merece</h2>
+          <p class="mb-12 opacity-80">
             Deixe-nos contar a história do seu evento com vídeos que emocionam e
             eternizam cada detalhe.
           </p>
-        </div>
-        <div class="videos">
-          <div class="iframe__div">
-            <iframe
-              class="iframe"
-              src="https://player.vimeo.com/video/1073026260?h=c082887a78&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;autoplay=1&amp;muted=1&amp;controls=0&amp;loop=1"
-              frameborder="0"
-              allow="autoplay; fullscreen; clipboard-write; encrypted-media"
-              style="width: 100%; height: 100%"
-            ></iframe>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="aspect-[9/16] w-full overflow-hidden rounded-xl shadow-2xl bg-black transition-transform hover:scale-105">
+            <iframe src="https://player.vimeo.com/video/1073026260?h=c082887a78&amp;autoplay=1&amp;muted=1&amp;loop=1&amp;controls=0&amp;badge=0&amp;autopause=0&amp;quality=720p" class="h-full w-full" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" title="Vídeo de Aniversário 1" loading="lazy"></iframe>
           </div>
-          <div class="iframe__div__even">
-            <iframe
-              class="iframe"
-              src="https://player.vimeo.com/video/1073026250?h=d26dd777bd&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;autoplay=1&amp;muted=1&amp;controls=0&amp;loop=1"
-              frameborder="0"
-              allow="autoplay; fullscreen; clipboard-write; encrypted-media"
-              style="width: 100%; height: 100%"
-            ></iframe>
+          <div class="aspect-[9/16] w-full overflow-hidden rounded-xl shadow-2xl bg-black transition-transform hover:scale-105 md:translate-y-8">
+            <iframe src="https://player.vimeo.com/video/1073026250?h=d26dd777bd&amp;autoplay=1&amp;muted=1&amp;loop=1&amp;controls=0&amp;badge=0&amp;autopause=0&amp;quality=720p" class="h-full w-full" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" title="Vídeo de Casamento 1" loading="lazy"></iframe>
           </div>
-          <div class="iframe__div">
-            <iframe
-              class="iframe"
-              src="https://player.vimeo.com/video/1073026229?h=265b0ae791&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;autoplay=1&amp;muted=1&amp;controls=0&amp;loop=1"
-              frameborder="0"
-              allow="autoplay; fullscreen; clipboard-write; encrypted-media"
-              style="width: 100%; height: 100%"
-            ></iframe>
+          <div class="aspect-[9/16] w-full overflow-hidden rounded-xl shadow-2xl bg-black transition-transform hover:scale-105">
+            <iframe src="https://player.vimeo.com/video/1073026229?h=265b0ae791&amp;autoplay=1&amp;muted=1&amp;loop=1&amp;controls=0&amp;badge=0&amp;autopause=0&amp;quality=720p" class="h-full w-full" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" title="Vídeo de Evento Corporativo" loading="lazy"></iframe>
           </div>
-          <div class="iframe__div__even">
-            <iframe
-              class="iframe"
-              src="https://player.vimeo.com/video/1073026220?h=40ace11531&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;autoplay=1&amp;muted=1&amp;controls=0&amp;loop=1"
-              frameborder="0"
-              allow="autoplay; fullscreen; clipboard-write; encrypted-media"
-              style="width: 100%; height: 100%"
-            ></iframe>
+          <div class="aspect-[9/16] w-full overflow-hidden rounded-xl shadow-2xl bg-black transition-transform hover:scale-105 md:translate-y-8">
+            <iframe src="https://player.vimeo.com/video/1073026220?h=40ace11531&amp;autoplay=1&amp;muted=1&amp;loop=1&amp;controls=0&amp;badge=0&amp;autopause=0&amp;quality=720p" class="h-full w-full" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" title="Vídeo de Aniversário 2" loading="lazy"></iframe>
           </div>
-          <script src="https://player.vimeo.com/api/player.js"></script>
         </div>
       </div>
-    </div>
-    <div class="hero hero-padding bg-base-black min-h-screen">
-      <div class="hero-content text-center">
-        <div class="max-w-5x1">
-          <h1 class="text-5xl font-bold">Nossos serviços</h1>
-          <p class="py-6">A excelência audiovisual que o seu evento merece.</p>
-          <div class="tabs tabs-border container">
-            <input
-              type="radio"
-              name="my_tabs_2"
-              class="tab"
-              aria-label="Aniversários"
-            />
-            <div class="tab-content border-base-300 bg-base-100 p-10">
-              <div class="card__container">
-                <div
-                  class="card bg-base-100 w-96 shadow-sm animate__animated animate__fadeInLeft"
-                >
-                  <div class="card-body">
-                    <h2 class="card-title">Básico</h2>
-                    <ul class="card-text">
-                      <li class="disclaimer-convidados">*Até 50 convidados</li>
-                      <li>1 Reels (pilula)</li>
-                      <li>10 fotos mobile editadas profissionalmente</li>
-                      <li class="disclaimer-tempo">*4h de cobertura</li>
-                      <br />
-                    </ul>
-                  </div>
+    </section>
 
-                  <figure>
-                    <img
-                      loading="lazy"
-                      class="card-img mobile1"
-                      src="src/niver1.jpg"
-                    />
-                  </figure>
-                </div>
-                <div
-                  class="card bg-base-100 w-96 shadow-sm animate__animated animate__fadeInUp"
-                >
-                  <div class="card-body">
-                    <h2 class="card-title">Médio</h2>
-                    <ul class="card-text">
-                      <li class="disclaimer-convidados">*Até 100 convidados</li>
-                      <li>1 Aftermovie (video)</li>
-                      <li>1 Reels (pilula)</li>
-                      <li>20 fotos mobile editadas profissionalmente</li>
-                      <li class="disclaimer-tempo">*4h de cobertura</li>
-                    </ul>
-                  </div>
-
-                  <figure>
-                    <img
-                      loading="lazy"
-                      class="card-img mobile1"
-                      src="src/niver2.jpg"
-                    />
-                  </figure>
-                </div>
-                <div
-                  class="card bg-base-100 w-96 shadow-sm animate__animated animate__fadeInRight"
-                >
-                  <div class="card-body">
-                    <h2 class="card-title">Premium</h2>
-                    <ul class="card-text">
-                      <li>1 Aftermovie (video)</li>
-                      <li>1 Reels (pilula)</li>
-                      <li>Drone</li>
-                      <li>70 Fotos profissionais (câmera)</li>
-                      <li class="disclaimer-tempo">*4h de cobertura</li>
-                    </ul>
-                  </div>
-
-                  <figure>
-                    <img
-                      loading="lazy"
-                      class="card-img mobile1"
-                      src="src/niver3.jpg"
-                    />
-                  </figure>
-                </div>
-              </div>
+    <section class="py-20 bg-black text-white">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl md:text-5xl font-bold mb-4">Nossos serviços</h2>
+        <p class="mb-12 opacity-80">A excelência audiovisual que o seu evento merece.</p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-20 px-4">
+          <div class="card bg-white text-black shadow-xl">
+            <div class="card-body">
+              <h2 class="card-title justify-center text-3xl font-bold">Aniversários</h2>
+              <ul class="text-left space-y-2 opacity-70">
+                <li>✓ Reels (pílula)</li>
+                <li>✓ Fotos mobile editadas</li>
+                <li>✓ Cobertura completa</li>
+              </ul>
             </div>
-
-            <input
-              type="radio"
-              name="my_tabs_2"
-              class="tab"
-              aria-label="Casamentos"
-              checked="checked"
-            />
-            <div class="tab-content border-base-300 bg-base-100 p-10">
-              <div class="card__container">
-                <div
-                  class="card bg-base-100 w-96 shadow-sm animate__animated animate__fadeInLeft"
-                >
-                  <div class="card-body">
-                    <h2 class="card-title">Básico</h2>
-                    <ul class="card-text">
-                      <li>Peça principal (Filme do casamento)</li>
-                      <li>2 Reels (pilula)</li>
-                      <li>Drone</li>
-                      <li>120 fotos</li>
-                    </ul>
-                  </div>
-
-                  <figure>
-                    <img
-                      loading="lazy"
-                      class="card-img mobile1"
-                      src="src/casamento1.webp"
-                    />
-                  </figure>
-                </div>
-                <div
-                  class="card bg-base-100 w-96 shadow-sm animate__animated animate__fadeInUp"
-                >
-                  <div class="card-body">
-                    <h2 class="card-title">Médio</h2>
-                    <ul class="card-text">
-                      <li>Peça principal (Filme do casamento)</li>
-                      <li>4 Reels (pilula)</li>
-                      <li>Drone</li>
-                      <li>Storymaker - 5 unidades</li>
-                      <li>150 fotos</li>
-                    </ul>
-                  </div>
-
-                  <figure>
-                    <img
-                      loading="lazy"
-                      class="card-img mobile1"
-                      src="src/casamento2.jpg"
-                    />
-                  </figure>
-                </div>
-                <div
-                  class="card bg-base-100 w-96 shadow-sm animate__animated animate__fadeInRight"
-                >
-                  <div class="card-body">
-                    <h2 class="card-title">Premium</h2>
-                    <ul class="card-text">
-                      <li>Peça principal (Filme do casamento)</li>
-                      <li>4 Reels (pilula)</li>
-                      <li>Drone</li>
-                      <li>Storymaker - 10 unidades</li>
-                      <li>200 fotos</li>
-                      <li>Pré-wedding (1 vídeo + 20 fotos)</li>
-                    </ul>
-                  </div>
-                  <figure>
-                    <img
-                      loading="lazy"
-                      class="card-img mobile1"
-                      src="src/casamento3.webp"
-                    />
-                  </figure>
-                </div>
-              </div>
+          </div>
+          <div class="card bg-white text-black shadow-xl">
+            <div class="card-body">
+              <h2 class="card-title justify-center text-3xl font-bold">Casamentos</h2>
+              <ul class="text-left space-y-2 opacity-70">
+                <li>✓ Filme principal</li>
+                <li>✓ Drone</li>
+                <li>✓ Reels</li>
+                <li>✓ Cobertura fotográfica profissional</li>
+              </ul>
             </div>
-            <input
-              type="radio"
-              name="my_tabs_2"
-              class="tab"
-              aria-label="Eventos"
-              checked="checked"
-            />
-            <div class="tab-content border-base-300 bg-base-100 p-10">
-              <div class="card__container2">
-                <div class="carousel w-full">
-                  <div id="item1" class="carousel-item w-full">
-                    <div
-                      class="card bg-base-100 w-96 shadow-sm animate__animated animate__fadeInLeft"
-                    >
-                      <figure>
-                        <img
-                          loading="lazy"
-                          class="card-img mobile2"
-                          src="src/evento1.jpg"
-                        />
-                      </figure>
-                    </div>
-                    <div
-                      class="card bg-base-100 w-96 shadow-sm animate__animated animate__fadeInUp"
-                    >
-                      <figure>
-                        <img
-                          loading="lazy"
-                          class="card-img mobile2"
-                          src="src/evento2.jpg"
-                        />
-                      </figure>
-                    </div>
-                    <div
-                      class="card bg-base-100 w-96 shadow-sm animate__animated animate__fadeInRight"
-                    >
-                      <figure>
-                        <img
-                          loading="lazy"
-                          class="card-img mobile2"
-                          src="src/evento3.jpg"
-                        />
-                      </figure>
-                    </div>
-                  </div>
-                  <div id="item2" class="carousel-item w-full">
-                    <div
-                      class="card bg-base-100 w-96 shadow-sm animate__animated animate__fadeInLeft"
-                    >
-                      <figure>
-                        <img
-                          loading="lazy"
-                          class="card-img mobile2"
-                          src="src/evento4.jpg"
-                        />
-                      </figure>
-                    </div>
-                    <div
-                      class="card bg-base-100 w-96 shadow-sm animate__animated animate__fadeInUp"
-                    >
-                      <figure>
-                        <img
-                          loading="lazy"
-                          class="card-img mobile2"
-                          src="src/evento5.jpg"
-                        />
-                      </figure>
-                    </div>
-                    <div
-                      class="card bg-base-100 w-96 shadow-sm animate__animated animate__fadeInRight"
-                    >
-                      <figure>
-                        <img
-                          loading="lazy"
-                          class="card-img mobile2"
-                          src="src/evento6.jpg"
-                        />
-                      </figure>
-                    </div>
-                  </div>
-                  <div id="item3" class="carousel-item w-full">
-                    <div
-                      class="card bg-base-100 w-96 shadow-sm animate__animated animate__fadeInLeft"
-                    >
-                      <figure>
-                        <img
-                          loading="lazy"
-                          class="card-img mobile2"
-                          src="src/evento7.jpg"
-                        />
-                      </figure>
-                    </div>
-                    <div
-                      class="card bg-base-100 w-96 shadow-sm animate__animated animate__fadeInUp"
-                    >
-                      <figure>
-                        <img
-                          loading="lazy"
-                          class="card-img mobile2"
-                          src="src/evento8.jpg"
-                        />
-                      </figure>
-                    </div>
-                    <div
-                      class="card bg-base-100 w-96 shadow-sm animate__animated animate__fadeInRight"
-                    >
-                      <figure>
-                        <img
-                          loading="lazy"
-                          class="card-img mobile2"
-                          src="src/evento9.jpg"
-                        />
-                      </figure>
-                    </div>
-                  </div>
-                </div>
-                <div class="flex w-full justify-center gap-2 py-2">
-                  <a href="#item1" class="btn btn-xs"></a>
-                  <a href="#item2" class="btn btn-xs"></a>
-                  <a href="#item3" class="btn btn-xs"></a>
-                </div>
-              </div>
+          </div>
+          <div class="card bg-white text-black shadow-xl">
+            <div class="card-body">
+              <h2 class="card-title justify-center text-3xl font-bold">Corporativo</h2>
+              <ul class="text-left space-y-2 opacity-70">
+                <li>✓ Vídeos institucionais</li>
+                <li>✓ Cobertura de eventos</li>
+                <li>✓ Branding audiovisual</li>
+              </ul>
             </div>
-            <input
-              type="radio"
-              name="my_tabs_2"
-              class="tab"
-              aria-label="Corporativo"
-              checked="checked"
-            />
-            <div class="tab-content border-base-300 bg-base-100 p-10">
-              <div class="card__container2">
-                <div class="carousel w-full">
-                  <div id="item4" class="carousel-item w-full">
-                    <div
-                      class="card bg-base-100 w-96 shadow-sm animate__animated animate__fadeInLeft"
-                    >
-                      <figure>
-                        <img
-                          class="card-img mobile2"
-                          src="src/corporativo1.jpg"
-                        />
-                      </figure>
-                    </div>
-                    <div
-                      class="card bg-base-100 w-96 shadow-sm animate__animated animate__fadeInUp"
-                    >
-                      <figure>
-                        <img
-                          class="card-img mobile2"
-                          src="src/corporativo2.jpg"
-                        />
-                      </figure>
-                    </div>
-                    <div
-                      class="card bg-base-100 w-96 shadow-sm animate__animated animate__fadeInRight"
-                    >
-                      <figure>
-                        <img
-                          class="card-img mobile2"
-                          src="src/corporativo3.jpg"
-                        />
-                      </figure>
-                    </div>
-                  </div>
-                  <div id="item5" class="carousel-item w-full">
-                    <div
-                      class="card bg-base-100 w-96 shadow-sm animate__animated animate__fadeInLeft"
-                    >
-                      <figure>
-                        <img
-                          class="card-img mobile2"
-                          src="src/corporativo4.jpg"
-                        />
-                      </figure>
-                    </div>
-                    <div
-                      class="card bg-base-100 w-96 shadow-sm animate__animated animate__fadeInUp"
-                    >
-                      <figure>
-                        <img
-                          class="card-img mobile2"
-                          src="src/corporativo5.jpg"
-                        />
-                      </figure>
-                    </div>
-                    <div
-                      class="card bg-base-100 w-96 shadow-sm animate__animated animate__fadeInRight"
-                    >
-                      <figure>
-                        <img
-                          class="card-img mobile2"
-                          src="src/corporativo6.jpg"
-                        />
-                      </figure>
-                    </div>
-                  </div>
-                  <div id="item6" class="carousel-item w-full">
-                    <div
-                      class="card bg-base-100 w-96 shadow-sm animate__animated animate__fadeInLeft"
-                    >
-                      <figure>
-                        <img
-                          class="card-img mobile2"
-                          src="src/corporativo7.jpg"
-                        />
-                      </figure>
-                    </div>
-                    <div
-                      class="card bg-base-100 w-96 shadow-sm animate__animated animate__fadeInUp"
-                    >
-                      <figure>
-                        <img
-                          class="card-img mobile2"
-                          src="src/corporativo8.jpg"
-                        />
-                      </figure>
-                    </div>
-                    <div
-                      class="card bg-base-100 w-96 shadow-sm animate__animated animate__fadeInRight"
-                    >
-                      <figure>
-                        <img
-                          class="card-img mobile2"
-                          src="src/corporativo9.jpg"
-                        />
-                      </figure>
-                    </div>
-                  </div>
-                  <div id="item7" class="carousel-item w-full">
-                    <div
-                      class="card bg-base-100 w-96 shadow-sm animate__animated animate__fadeInLeft"
-                    >
-                      <figure>
-                        <img
-                          class="card-img mobile2"
-                          src="src/corporativo10.jpg"
-                        />
-                      </figure>
-                    </div>
-                    <div
-                      class="card bg-base-100 w-96 shadow-sm animate__animated animate__fadeInUp"
-                    >
-                      <figure>
-                        <img
-                          class="card-img mobile2"
-                          src="src/corporativo11.jpg"
-                        />
-                      </figure>
-                    </div>
-                    <div
-                      class="card bg-base-100 w-96 shadow-sm animate__animated animate__fadeInRight"
-                    >
-                      <figure>
-                        <img
-                          class="card-img mobile2"
-                          src="src/corporativo12.jpg"
-                        />
-                      </figure>
-                    </div>
-                  </div>
-                </div>
-                <div class="flex w-full justify-center gap-2 py-2">
-                  <a href="#item4" class="btn btn-xs"></a>
-                  <a href="#item5" class="btn btn-xs"></a>
-                  <a href="#item6" class="btn btn-xs"></a>
-                  <a href="#item7" class="btn btn-xs"></a>
-                </div>
+          </div>
+        </div>
+
+          <!-- Carrossel de Imagens da pasta src/carousel -->
+          <div class="max-w-5xl mx-auto mb-20 px-4">
+            <h3 class="text-3xl font-bold mb-8">Galeria Bon Films</h3>
+            <div id="gallery-carousel" class="carousel w-full rounded-2xl shadow-2xl">
+              <div class="carousel-item w-full md:w-1/3">
+                <img src="src/carousel/1.jpg" class="w-full object-cover aspect-[9/16]" alt="Galeria 1" loading="lazy" />
+              </div>
+              <div class="carousel-item w-full md:w-1/3 border-x border-black/10">
+                <img src="src/carousel/2.jpg" class="w-full object-cover aspect-[9/16]" alt="Galeria 2" loading="lazy" />
+              </div>
+              <div class="carousel-item w-full md:w-1/3">
+                <img src="src/carousel/3.jpg" class="w-full object-cover aspect-[9/16]" alt="Galeria 3" loading="lazy" />
+              </div>
+              <div class="carousel-item w-full md:w-1/3 border-x border-black/10">
+                <img src="src/carousel/4.jpg" class="w-full object-cover aspect-[9/16]" alt="Galeria 4" loading="lazy" />
+              </div>
+              <div class="carousel-item w-full md:w-1/3">
+                <img src="src/carousel/5.jpg" class="w-full object-cover aspect-[9/16]" alt="Galeria 5" loading="lazy" />
+              </div>
+              <div class="carousel-item w-full md:w-1/3 border-r border-black/10">
+                <img src="src/carousel/6.jpg" class="w-full object-cover aspect-[9/16]" alt="Galeria 6" loading="lazy" />
+              </div>
+              <div class="carousel-item w-full md:w-1/3">
+                <img src="src/carousel/7.jpg" class="w-full object-cover aspect-[9/16]" alt="Galeria 7" loading="lazy" />
+              </div>
+              <div class="carousel-item w-full md:w-1/3 border-x border-black/10">
+                <img src="src/carousel/8.jpg" class="w-full object-cover aspect-[9/16]" alt="Galeria 8" loading="lazy" />
+              </div>
+              <div class="carousel-item w-full md:w-1/3">
+                <img src="src/carousel/9.jpg" class="w-full object-cover aspect-[9/16]" alt="Galeria 9" loading="lazy" />
+              </div>
+              <div class="carousel-item w-full md:w-1/3 border-x border-black/10">
+                <img src="src/carousel/10.jpg" class="w-full object-cover aspect-[9/16]" alt="Galeria 10" loading="lazy" />
+              </div>
+              <div class="carousel-item w-full md:w-1/3">
+                <img src="src/carousel/11.jpg" class="w-full object-cover aspect-[9/16]" alt="Galeria 11" loading="lazy" />
+              </div>
+              <div class="carousel-item w-full md:w-1/3 border-l border-black/10">
+                <img src="src/carousel/12.jpg" class="w-full object-cover aspect-[9/16]" alt="Galeria 12" loading="lazy" />
               </div>
             </div>
           </div>
+
           <a
             href="https://wa.me/+5521972874002"
-            class="btn-ct btn-neutral main-btn w-100 padding"
+            class="btn bg-white text-black hover:bg-white/90 border-none btn-lg w-full md:w-96 mb-20"
           >
             Entre em contato
           </a>
-          <h2 class="text-5xl title-padding font-bold">
-            Condições de pagamento
-          </h2>
-          <div class="container">
-            <div class="payment-forms">
-              <div class="payment-forms-card">
-                <h3>Á vista</h3>
-                <p>No Pix, transferência bancária ou dinheiro.</p>
-                <p>50% de sinal + 50% pós evento.</p>
-              </div>
-              <div class="payment-forms-card">
-                <br />
-                <h3>Parcelado</h3>
-                <p>Em até 3x no crédito.</p>
-              </div>
+
+          <h2 class="text-4xl font-bold mb-10">Condições de pagamento</h2>
+          <div class="flex flex-col md:flex-row justify-center gap-8 max-w-4xl mx-auto">
+            <div class="flex-1 bg-white text-black p-8 rounded-2xl shadow-lg">
+              <h3 class="text-2xl font-bold mb-4">À vista</h3>
+              <p class="opacity-80">Pix, transferência ou dinheiro.</p>
+              <p class="font-semibold mt-2">50% sinal + 50% pós-evento.</p>
+            </div>
+            <div class="flex-1 bg-white text-black p-8 rounded-2xl shadow-lg">
+              <h3 class="text-2xl font-bold mb-4">Parcelado</h3>
+              <p class="opacity-80">Facilitamos para você.</p>
+              <p class="font-semibold mt-2">Até 3x no cartão de crédito.</p>
             </div>
           </div>
-        </div>
       </div>
-    </div>
+    </section>
+
     <footer
-      class="footer sm:footer-horizontal bg-neutral text-neutral-content items-center p-4"
+      class="footer bg-black text-white p-10 flex flex-col md:flex-row justify-between items-center border-t border-white/10"
     >
-      <aside class="grid-flow-col items-center">
-        <img
-          loading="lazy"
-          class="footer__logo"
-          src="src/LOGO BONFILMS - 03.png"
-          alt=""
-        />
-        <p>© 2025 - Todos os direitos reservados</p>
+      <aside class="flex flex-col items-center md:items-start gap-2">
+        <p class="font-bold">BON FILMS</p>
+        <p class="opacity-60">© 2025 - Todos os direitos reservados</p>
       </aside>
-      <nav class="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
-        <a href="https://www.instagram.com/_bonfilms/">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            class="fill-current"
-          >
-            <path
-              d="M12 2.162c3.204 0 3.584.012 4.85.07 1.366.062 2.633.336 3.608 1.311.975.975 1.249 2.242 1.311 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.336 2.633-1.311 3.608-.975.975-2.242 1.249-3.608 1.311-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.336-3.608-1.311-.975-.975-1.249-2.242-1.311-3.608-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.062-1.366.336-2.633 1.311-3.608.975-.975 2.242-1.249 3.608-1.311 1.266-.058 1.646-.07 4.85-.07M12 0C8.741 0 8.332.014 7.052.072 4.745.272 2.69 1.492 1.46 3.08.23 4.667 0 6.915 0 12s.23 7.333 1.46 8.92c1.23 1.588 3.285 2.808 5.592 3.008 1.28.058 1.689.072 4.95.072s3.67-.014 4.95-.072c2.307-.2 4.362-1.42 5.592-3.008 1.23-1.587 1.46-3.835 1.46-8.92s-.23-7.333-1.46-8.92c-1.23-1.588-3.285-2.808-5.592-3.008C15.67.014 15.26 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 10-.001 2.88 1.44 1.44 0 00.001-2.88z"
-            />
-          </svg>
+      <nav class="flex gap-6">
+        <a href="https://www.instagram.com/_bonfilms/" class="hover:opacity-70 transition-opacity">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.337 3.608 1.31.976.975 1.249 2.242 1.311 3.609.058 1.265.069 1.646.069 4.848 0 3.203-.012 3.583-.069 4.849-.062 1.366-.336 2.633-1.311 3.608-.975.976-2.242 1.25-3.608 1.311-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.336-3.608-1.311-.976-.975-1.249-2.242-1.311-3.608-.058-1.266-.069-1.646-.069-4.849 0-3.203.012-3.583.069-4.849.062-1.366.336-2.633 1.311-3.608.975-.976 2.242-1.25 3.608-1.311 1.266-.058 1.646-.07 4.85-.07zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
         </a>
-        <a href="https://wa.me/+5521972874002">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            class="fill-current"
-          >
-            <path
-              d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.837 9.837 0 0 0 12.04 2zm4.81 14.14c-.23.65-1.15 1.22-1.71 1.33-.46.09-.97.13-1.57-.14-.36-.15-.82-.34-1.41-.66-2.5-1.08-4.14-3.59-4.26-3.75-.12-.16-.97-1.29-.97-2.46 0-1.17.61-1.75.85-1.99.23-.23.51-.26.7-.26.18 0 .37 0 .53.01.16.01.38-.06.59.45.23.56.79 1.94.86 2.08.07.14.12.31.01.47-.11.16-.17.26-.32.4-.16.15-.33.33-.47.44-.15.12-.31.26-.14.52.18.26.78 1.13 1.67 1.82.98.69 1.78.9 2.04 1.02.26.12.42.1.58-.06.16-.15.68-.71.86-.97.18-.26.36-.22.61-.13.26.1 1.62.77 1.89.91.26.14.44.21.5.32.07.11.07.63-.16 1.26z"
-            />
-          </svg>
-        </a>
-        <a href="mailto:bonfilms021@gmail.com">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            class="fill-current"
-          >
-            <path
-              d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6zm-2 0l-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z"
-            />
-          </svg>
+        <a href="https://wa.me/+5521972874002" class="hover:opacity-70 transition-opacity">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.438 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
         </a>
       </nav>
     </footer>
