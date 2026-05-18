@@ -1,4 +1,18 @@
 document.addEventListener("DOMContentLoaded", function () {
+  // Gerenciamento do Loader
+  const loader = document.getElementById('loader');
+  if (loader) {
+    // Impede o scroll enquanto carrega
+    document.body.style.overflow = 'hidden';
+
+    window.addEventListener('load', function() {
+      setTimeout(() => {
+        loader.classList.add('fade-out');
+        document.body.style.overflow = ''; // Libera o scroll
+      }, 2000); // Delay de 2s para garantir que a animação seja vista
+    });
+  }
+
   // Smooth scroll for carousel indicators without page jump
   const carouselButtons = document.querySelectorAll('a[href^="#item"]');
 
@@ -53,4 +67,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
     setInterval(autoScroll, 2000);
   }
+
+  // Scroll Reveal Logic
+  const revealElements = document.querySelectorAll('.reveal');
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        // Opcional: parar de observar após revelar para performance
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 }); // Dispara quando 15% do elemento está visível
+
+  revealElements.forEach(el => revealObserver.observe(el));
 });
